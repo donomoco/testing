@@ -3,4 +3,4 @@
   gather_facts: no
   tasks:
     - debug: 
-        msg: {{ user }}
+        var:  user 
