@@ -5,4 +5,4 @@
   tasks:
     - name: debug vars
       debug: 
-      var: user
+      msg: {{ user }}
