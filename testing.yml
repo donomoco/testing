@@ -1,12 +1,11 @@
 ---
-- hosts: all
+- hosts: staging_switches
   connection: network_cli
   gather_facts: no
   tasks:
-    - name: Gather only the config and default facts
-      cisco.ios.ios_facts:
-        gather_subset:
-          - config         
-      register: show_run
-    - debug:
-        msg: '{{ show_run }}'
+   - name: Create Vlan on staging swtiches
+     cisco.ios.ios_vlans:
+       config:
+         - name: {{ userid }}_{{ project_name }}_{{ vlan_id }}
+           vlan_id: {{ vlan_id }}
+           state: active
