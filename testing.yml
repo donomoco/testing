@@ -6,6 +6,6 @@
    - name: Create Vlan on staging swtiches
      cisco.ios.ios_vlans:
        config:
-         - name: {{ userid }}_{{ project_name }}_{{ vlan_id }}
-           vlan_id: {{ vlan_id }}
+         - name: "{{ userid }}_{{ project_name }}_{{ vlan_id }}"
+           vlan_id: "{{ vlan_id }}"
            state: active
