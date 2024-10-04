@@ -1,8 +1,7 @@
 ---
 - hosts: all
-  connection: network_cli
   gather_facts: no
   tasks:
     - name: debug vars
       debug: 
-      msg: {{ user }}
+      msg: this is a test #{{ user }}
