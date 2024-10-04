@@ -3,7 +3,6 @@
   connection: network_cli
   gather_facts: no
   tasks:
-    - name: show VLAN from IOS
-      ios_command:
-        commands: show vlan brief
-      register: show_vlan
+    - name: debug vars
+      debug: 
+      var: user
