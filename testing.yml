@@ -2,6 +2,5 @@
 - hosts: all
   gather_facts: no
   tasks:
-    - name: debug vars
-      debug: 
-      msg: this is a test #{{ user }}
+    - debug: 
+        msg: this is a test #{{ user }}
