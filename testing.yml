@@ -3,4 +3,4 @@
   gather_facts: no
   tasks:
     - debug: 
-        msg: this is a test #{{ user }}
+        msg: {{ user }}
